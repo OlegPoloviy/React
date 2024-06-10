@@ -1,0 +1,23 @@
+.head{
+    position: fixed;
+    display: flex;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: crimson;
+}
+
+.list{
+    list-style-type: none;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    margin-left: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.list li:hover{
+    text-decoration: underline;
+}

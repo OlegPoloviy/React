@@ -1,0 +1,16 @@
+.foot{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.foot input{
+    height: 25px;
+    margin-top: 15px;
+}
