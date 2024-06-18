@@ -1,18 +1,12 @@
-import {connect} from 'react-redux'
+import {useSelector} from "react-redux";
 
-function Count({count}) {
+export function Count() {
+
+    const {count} = useSelector(store => store.counter)
 
     return(
         <>
-            <div>
-                <h2>Count is {count}</h2>
-            </div>
+            <h2>Count is {count}</h2>
         </>
     )
 }
-
-const mapStateFromProps = (state) => ({
-    count : state.count
-})
-
-export default connect(mapStateFromProps)(Count)

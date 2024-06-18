@@ -1,14 +1,12 @@
-import {connect} from "react-redux";
-import {Minus as Min} from '../store/actions/Counter.jsx'
+import {useDispatch} from 'react-redux'
+import {MinusAction} from "../store/actions";
 
-function Minus({MinusOne}) {
+export function Minus() {
+
+    const dispatch = useDispatch()
+
     return(
-        <button onClick={MinusOne}>Minus</button>
+        <button onClick={() =>  dispatch(MinusAction())}> Minus </button>
     )
 }
 
-const mapDispatchToProps = (dispatch) => ({
-    MinusOne : () => dispatch(Min())
-})
-
-export default connect(null,mapDispatchToProps)(Minus)

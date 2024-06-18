@@ -1,15 +1,17 @@
-import {connect} from "react-redux";
-import {Zero as Zr} from "../store/actions/Counter.jsx";
+import {useDispatch,useSelector} from "react-redux";
+import {ZeroAction} from "../store/actions/index.jsx";
 
-function Zero({SetToZero}){
+export function Zero(){
+
+    const dispatch = useDispatch()
+
+    const {count} = useSelector(store => store.counter)
 
     return(
-        <button onClick={SetToZero}>Set zero</button>
+        <>
+            <button onClick={() => dispatch(ZeroAction())}>Set zero</button>
+            <br/>
+            <b>New state : {count} </b>
+        </>
     )
 }
-
-const mapDispatchToProps = (dispatch) => ({
-    SetToZero : () => dispatch(Zr())
-})
-
-export default connect(null,mapDispatchToProps)(Zero)

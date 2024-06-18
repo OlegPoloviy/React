@@ -3,6 +3,7 @@ import {CONSTANTS_ENUM} from "../constsants/Constants.jsx";
 
 export function counterReducer(store = storeCount,action){
 
+    console.log(store)
     const {count} = store
 
     switch(action.type){
@@ -13,6 +14,6 @@ export function counterReducer(store = storeCount,action){
         case CONSTANTS_ENUM.SET_ZERO :
             return {...store,count : 0}
         default :
-            return {store}
+            return {...store}
     }
 }

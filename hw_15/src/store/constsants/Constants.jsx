@@ -1,5 +1,9 @@
 export const CONSTANTS_ENUM = {
     PLUS : 'PLUS',
     MINUS : 'MINUS',
-    SET_ZERO : 'SET_ZERO'
+    SET_ZERO : 'SET_ZERO',
+    USERS : 'USERS',
+    DELETE_USERS : 'DELETE_USERS',
+    POSTS : 'POSTS',
+    COMMENTS : 'COMMENTS'
 }

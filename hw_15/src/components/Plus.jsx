@@ -1,17 +1,11 @@
-import {connect} from "react-redux";
-import {Plus as pl} from "../store/actions/Counter.jsx";
+import {useDispatch} from "react-redux";
+import {PlusAction} from "../store/actions";
 
-function Plus({AddOne}) {
+export function Plus() {
 
-    console.log(AddOne)
+    const dispatch = useDispatch()
 
     return(
-        <button onClick={AddOne}>Plus</button>
+        <button onClick={() => dispatch(PlusAction())}>Plus</button>
     )
 }
-
-const mapDispatchToProps = (dispatch) => ({
-    AddOne : () => dispatch(pl())
-})
-
-export default connect(null,mapDispatchToProps)(Plus)
